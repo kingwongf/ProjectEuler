@@ -1,15 +1,21 @@
 import numpy as np
+import time
 
+start = time.time()
 num = 600851475143
 a = 2
 factor = []
-while a > 1 and a <= num:
-    while num % a == 0:
-        factor.append(a)
-        num = num/a
-    a = a+1
+for i in range(100000):
+    while a > 1 and a <= num:
+        while num % a == 0:
+            factor.append(a)
+            num = num/a
+        a = a+1
 
 print(factor)
+print((time.time() - start))
+
+
 
 def prime_factors(n):
     """Returns all the prime factors of a positive integer"""
@@ -25,7 +31,8 @@ def prime_factors(n):
             break
     return factors
 
-
-pfs = prime_factors(600851475143 )
+start = time.time()
+for i in range(100000): pfs = prime_factors(600851475143)
 
 print(pfs)
+print((time.time() - start))

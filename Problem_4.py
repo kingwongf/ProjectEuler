@@ -1,5 +1,7 @@
 import numpy as np
+import time
 
+start = time.time()
 hold =[]
 ans =[]
 for i in range(100,1000):
@@ -9,4 +11,5 @@ for i in range(100,1000):
             ans.append(i*j)
             hold.append([i,j])
 
-print(max(ans), max(hold)[0]*max(hold)[1])
+print(max(ans))
+print((time.time() - start))

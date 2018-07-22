@@ -4,9 +4,9 @@ num2str = str(num)
 product=[]
 
 holdlist = []
-for i in range(13,len(num2str)+1):
+for i in range(5,len(num2str)+1):
     hold = 1
-    for j in range(i-13, i):
+    for j in range(i-5, i):
         hold = hold*int(num2str[j])
 
     holdlist.append(hold)
